@@ -54,26 +54,87 @@ html, body {
     position:relative;
     box-sizing: border-box;
 }
+* a{
+    text-decoration: none;
+}
 body {
-    height:100vh;
-    /* display:block; */
+    height:auto
 }
 main{
     height:100%;
 }
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 0 24px;
+    height:100%;
+}
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.row-col{
+    flex-direction: column;
+    justify-content: center;
+}
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+.mt-0{
+    margin-top:0px;
+}
+.my-0{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.my-30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+
+/*-------------text----------------------*/
+h1{font-size: 96px;font-family: Brandon Grotesque;font-weight: 900;margin-top: 0; margin-bottom: 30px;line-height: 84px;text-transform: capitalize;}
+h2{font-size: 48px;font-family: Brandon Grotesque;font-weight: 900;margin-top: 0;margin-bottom: 30px;line-height: 53.04px;}
+h3{font-size: 48px;font-family: Brandon Grotesque;font-weight: 700;margin-top: 0;margin-bottom: 30px;line-height: 53.04px;}
+p{font-size: 18px;font-family:  HK Grotesk;font-weight: normal;margin-bottom:30px;line-height: 27px;}
+.text-white{color:#fff;}
+.text-black{color:#222222;}
+.teal-back{background:#4DBBB6;}
+.red-back{background:#DC5B4D}
+.text-center{text-align:center;}
+.lignleft{text-align:left;}
+
+
+
 .nav {
     width: 100%;
-    height: 102px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index:10;
+    min-height: 102px;
+    position: relative;
+    z-index: 10;
 }
 .nav-container {
     margin-left: auto;
     margin-right: auto;
     max-width: 1230px;
-    padding: 24px 0;
+    padding: 20px 0;
     display:flex; 
     align-items:center; 
     justify-content:space-between; 
@@ -97,6 +158,17 @@ main{
     color: rgba(255,255,255);
     background-color: rgba(220,91,77);
 }
+
+
+.coming-soon-section {
+    height: 450px;
+    background-color: #F4F7FB;
+}
+.coming-soon-socials {
+    gap: 20px;
+    display: flex;
+}
+
 .hero {
     min-height: 100%;
     overflow: hidden;
@@ -106,33 +178,37 @@ main{
     max-width: 1230px;
     align-items: center;
     display: grid;
-    padding-top: 130px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 40px 25px;
     grid-template-columns: repeat(1,minmax(0,1fr));
     grid-template-rows: repeat(1,minmax(0,1fr));
 }
 .hero-content {
     z-index: 10;
 }
-.hero h1 {
-    font-size: 72px;
-    line-height: 72px;
-    font-family: Brandon Grotesque, sans-serif;
-    text-transform: capitalize;
-    clear: both;
-    margin:0;
-}
 .hero p {
-    margin: 2.2rem 0;
-    text-align: left;
-    white-space: break-spaces;
+    max-width: 400px;
 }
 .btn-teal {
     color: rgba(255,255,255);
     background-color: rgba(77,187,182);
     align-items: center;
     display: inline-flex;
+    font-size: 24px;
+    font-weight: 700;
+    height: 60px;
+    justify-content: center;
+    line-height: 1;
+    min-width: 214px;
+    padding: 0px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.btn-black {
+    color: rgba(255,255,255);
+    background-color: rgba(0,0,0);
+    align-items: center;
+    display: inline-flex;
+    font-size: 24px;
     font-weight: 700;
     height: 60px;
     justify-content: center;
@@ -160,12 +236,80 @@ main{
     transform: scale(1);
     z-index: 0;
 }
+
+
+.outer-container {
+    background: #4DBBB6;
+    margin: 50px 42px;
+}
+
+.we-are-section .row{
+    padding: 70px 0;
+}
+.we-are-section .row p {
+    max-width: 988px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.podcast-section {
+    padding: 100px 0;
+}
+span.author-badge {
+    font-family: HK Grotesk;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffff;
+    background: #DC5B4D;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 15px;
+    margin-bottom: 10px;
+}
+.podcast-links{
+    display:inline-flex;
+    justify-content:start;
+    gap:15px;
+}
+.podcast-links a{
+    max-width: 260px;
+    display: inline-block;
+}
+.podcast-links a img{
+    max-width: 260px;
+    display: inline-block;
+}
 @media (max-width: 1024px) {    
     .nav-container{
         padding: 24px;
     }
     .hero {
         padding-top: 150px;
+    }
+    .btn-teal,
+    .btn-black {
+        font-size: 20px;
+        font-weight: 700;
+        height: 55px;
+        min-width: 214px;
+        padding: 0px 20px;
+    }
+    .podcast-section .row {
+        text-align: center;
+        gap: 20px;
+    }
+    .podcast-section .row .col-5,
+    .podcast-section .row .col-7 {
+        width: 100%;
+    }
+    .podcast-section .row .col-7 p {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .podcast-links {
+        flex-flow: column;
+        justify-content: center;
+
     }
 }
 @media (min-width: 1024px) {
@@ -178,7 +322,6 @@ main{
 @media (min-width: 1200px){
     .hero {
         grid-template-columns: minmax(0,500px) auto;
-        padding-bottom: 0;
     }
     .hero img {
         --tw-translate-x: 0;

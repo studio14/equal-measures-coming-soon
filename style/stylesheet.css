@@ -177,7 +177,7 @@ p{font-size: 18px;font-family:  HK Grotesk;font-weight: normal;margin-bottom:30p
     margin-right: auto;
     max-width: 1230px;
     align-items: center;
-    display: grid;
+    display: none;
     padding: 40px 25px;
     grid-template-columns: repeat(1,minmax(0,1fr));
     grid-template-rows: repeat(1,minmax(0,1fr));
